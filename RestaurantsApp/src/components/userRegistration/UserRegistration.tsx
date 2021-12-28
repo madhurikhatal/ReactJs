@@ -62,7 +62,7 @@ interface IFormInput{
         <form onSubmit={handleSubmit(formSubmitHandler)}>  
          
             <Typography align='center'><h1>User Registration</h1></Typography>
-            <h1>Hello</h1>
+      
 
           <Grid container spacing={5}>
             <Grid item xs={6}>
