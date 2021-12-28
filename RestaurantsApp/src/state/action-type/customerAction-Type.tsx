@@ -1,10 +1,11 @@
 import { type } from "os";
 import { Dispatch } from "react";
  import{iCustomer } from '../../Models/customer/customer'
-export enum ActionType{
+export enum ActionType {
     FETCH_CUSTOMER_REQUEST = 'FETCH_CUSTOMER_REQUEST',
     FETCH_CUSTOMER_SUCCESS = 'FETCH_CUSTOMER_SUCCESS',
-    FETCH_CUSTOMER_FAILURE = 'FETCH_CUSTOMER_FAILURE'
+    FETCH_CUSTOMER_FAILURE = 'FETCH_CUSTOMER_FAILURE',
+    FETCH_SIGNUP_REQUEST = "FETCH_SIGNUP_REQUEST"
 }
 
 interface IfetchCustomerRequest{

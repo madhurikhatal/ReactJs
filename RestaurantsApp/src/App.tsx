@@ -2,8 +2,10 @@ import React from 'react';
 import './App.css';
 import { Container, Typography } from '@material-ui/core';
 import Login from './components/login/Login';
-import Order from './components/order/index'
+import Order from './components/order/index';
 
+
+import UserRegistration from './components/userRegistration/UserRegistration';
 import { Provider } from 'react-redux';
 import store from './state/store/store';
 
@@ -20,6 +22,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup/>} />   
           <Route path="/order" element={<Order/>} /> 
+          <Route path="/userRegistration" element={< UserRegistration/>} />
 
         </Routes>
 
