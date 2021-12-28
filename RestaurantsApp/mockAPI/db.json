@@ -11,25 +11,23 @@
       "id": 1,
       "name": "Khatal-Madhuri",
       "class": "ty",
-      "userName":"mk@gmail.com",
-      "passwrod":"12345"
+      "userName": "mk@gmail.com",
+      "passwrod": "12345"
     },
-     {
+    {
       "id": 2,
       "name": "Khatal-Ram",
       "class": "sy",
-      "userName":"rm@gmail.com",
-      "passwrod":"09876"
+      "userName": "rm@gmail.com",
+      "passwrod": "09876"
     },
-     {
+    {
       "id": 3,
       "name": "Khatal-Sham",
       "class": "fy",
-      "userName":"sk@gmail.com",
-      "passwrod":"12093"
+      "userName": "sk@gmail.com",
+      "passwrod": "12093"
     }
-   
-  
   ],
   "comments": [
     {
@@ -41,110 +39,180 @@
   "profile": {
     "name": "typicode"
   },
- "foodItems": [
-  {
-    "foodItemId": 1,
-    "foodItemName": "Chicken Tenders",
-    "price": 3.5
-  },
-  {
-    "foodItemId": 2,
-    "foodItemName": "Chicken Tenders w/ Fries",
-    "price": 4.99
-  },
-  {
-    "foodItemId": 3,
-    "foodItemName": "Chicken Tenders w/ Onion",
-    "price": 5.99
-  },
-  {
-    "foodItemId": 4,
-    "foodItemName": "Grilled Cheese Sandwich",
-    "price": 2.5
-  },
-  {
-    "foodItemId": 5,
-    "foodItemName": "Grilled Cheese Sandwich w/ Fries",
-    "price": 3.99
-  },
-  {
-    "foodItemId": 6,
-    "foodItemName": "Grilled Cheese Sandwich w/ Onion",
-    "price": 4.99
-  },
-  {
-    "foodItemId": 7,
-    "foodItemName": "Lettuce and Tomato Burger",
-    "price": 1.99
-  },
-  {
-    "foodItemId": 8,
-    "foodItemName": "Soup",
-    "price": 2.5
-  },
-  {
-    "foodItemId": 9,
-    "foodItemName": "Onion Rings",
-    "price": 2.99
-  },
-  {
-    "foodItemId": 10,
-    "foodItemName": "Fries",
-    "price": 1.99
-  },
-  {
-    "foodItemId": 11,
-    "foodItemName": "Sweet Potato Fries",
-    "price": 2.49
-  },
-  {
-    "foodItemId": 12,
-    "foodItemName": "Sweet Tea",
-    "price": 1.79
-  },
-  {
-    "foodItemId": 13,
-    "foodItemName": "Botttle Water",
-    "price": 1
-  },
-  {
-    "foodItemId": 14,
-    "foodItemName": "Canned Drinks",
-    "price": 1
-  }
-],
-"customers":[
-  {
-    "customerID": 1,
-    "customerName": "Jennifer Acosta"
-  },
-  {
-    "customerID": 2,
-    "customerName": "Daniel Hecker"
-  },
-  {
-    "customerID": 3,
-    "customerName": "Kate Smith"
-  },
-  {
-    "customerID": 4,
-    "customerName": "August Leo"
-  },
-  {
-    "customerID": 5,
-    "customerName": "Ava Elliot"
-  },
-  {
-    "customerID": 6,
-    "customerName": "Layla Benn"
-  },
-  {
-    "customerID": 7,
-    "customerName": "string1"
-  },
-  {
-    "customerID": 8,
-    "customerName": "string2"
-  }
-]
+  "foodItems": [
+    {
+      "foodItemId": 1,
+      "foodItemName": "Chicken Tenders",
+      "price": 3.5
+    },
+    {
+      "foodItemId": 2,
+      "foodItemName": "Chicken Tenders w/ Fries",
+      "price": 4.99
+    },
+    {
+      "foodItemId": 3,
+      "foodItemName": "Chicken Tenders w/ Onion",
+      "price": 5.99
+    },
+    {
+      "foodItemId": 4,
+      "foodItemName": "Grilled Cheese Sandwich",
+      "price": 2.5
+    },
+    {
+      "foodItemId": 5,
+      "foodItemName": "Grilled Cheese Sandwich w/ Fries",
+      "price": 3.99
+    },
+    {
+      "foodItemId": 6,
+      "foodItemName": "Grilled Cheese Sandwich w/ Onion",
+      "price": 4.99
+    },
+    {
+      "foodItemId": 7,
+      "foodItemName": "Lettuce and Tomato Burger",
+      "price": 1.99
+    },
+    {
+      "foodItemId": 8,
+      "foodItemName": "Soup",
+      "price": 2.5
+    },
+    {
+      "foodItemId": 9,
+      "foodItemName": "Onion Rings",
+      "price": 2.99
+    },
+    {
+      "foodItemId": 10,
+      "foodItemName": "Fries",
+      "price": 1.99
+    },
+    {
+      "foodItemId": 11,
+      "foodItemName": "Sweet Potato Fries",
+      "price": 2.49
+    },
+    {
+      "foodItemId": 12,
+      "foodItemName": "Sweet Tea",
+      "price": 1.79
+    },
+    {
+      "foodItemId": 13,
+      "foodItemName": "Botttle Water",
+      "price": 1
+    },
+    {
+      "foodItemId": 14,
+      "foodItemName": "Canned Drinks",
+      "price": 1
+    }
+  ],
+  "signup": [
+    {
+      "signupID": 1,
+      "signupName": "Jennifer Acosta",
+      "signupEmail": "jeni@gmail.com",
+      "signupBlood": "A+",
+      "signupPassword": "12345678",
+      "signupmobile": "9089879034",
+      "signupDate": ""
+    },
+    {
+      "signupID": 1,
+      "signupName": "Jennifer Acosta",
+      "signupEmail": "jeni@gmail.com",
+      "signupBlood": "A+",
+      "signupPassword": "12345678",
+      "signupmobile": "9089879034",
+      "signupDate": ""
+    },
+    {
+      "signupID": 1,
+      "signupName": "Jennifer Acosta",
+      "signupEmail": "jeni@gmail.com",
+      "signupBlood": "A+",
+      "signupPassword": "12345678",
+      "signupmobile": "9089879034",
+      "signupDate": ""
+    },
+    {
+      "signupID": 2,
+      "signupName": "vfdss",
+      "signupEmail": "ds@gmail.com",
+      "signupBlood": "B+",
+      "signupPassword": "1fdeccd",
+      "signupmobile": "4578987678",
+      "signupDate": ""
+    },
+    {
+      "signupID": 3,
+      "signupName": " om",
+      "signupEmail": "om@gmail.com",
+      "signupBlood": "AB+",
+      "signupPassword": "mjkiu89",
+      "signupmobile": "9078124545",
+      "signupDate": ""
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "madhuri",
+      "email": "madhuri@gmail.com",
+      "mobile": "123456",
+      "blood": "A+"
+    },
+    {
+      "username": "nikita",
+      "email": "nk@gmail.com",
+      "mobile": "678904",
+      "blood": "B+",
+      "id": 2
+    },
+    {
+      "username": "nikita",
+      "email": "nk@gmail.com",
+      "mobile": "678904",
+      "blood": "B+",
+      "id": 3
+    }
+  ],
+  "customers": [
+    {
+      "customerID": 1,
+      "customerName": "Jennifer Acosta"
+    },
+    {
+      "customerID": 2,
+      "customerName": "Daniel Hecker"
+    },
+    {
+      "customerID": 3,
+      "customerName": "Kate Smith"
+    },
+    {
+      "customerID": 4,
+      "customerName": "August Leo"
+    },
+    {
+      "customerID": 5,
+      "customerName": "Ava Elliot"
+    },
+    {
+      "customerID": 6,
+      "customerName": "Layla Benn"
+    },
+    {
+      "customerID": 7,
+      "customerName": "string1"
+    },
+    {
+      "customerID": 8,
+      "customerName": "string2"
+    }
+  ]
 }
