@@ -4,7 +4,7 @@ import { ActionType,Action } from "../../action-type/userRegistrationAction-Type
  
 const initialState = {
   loading: false,
-  orderMasterData: [],
+  users: [],
   error: ''
 }
 
@@ -18,13 +18,13 @@ export const userRegistrationReducer=(state=initialState,action:Action)=>{
       case ActionType.FETCH_USERREGISTRATION_SUCESS:
         return {
           loading: false,
-          userRegistrationData: action.payload,
+          users: action.payload,
           error: ''
         }
       case ActionType.FETCH_USERREGISTRATION_FAILURE:
         return {
           loading: false,
-          userRegistrationData: [],
+          users: [],
           error: action.payload
         }
       default: return state

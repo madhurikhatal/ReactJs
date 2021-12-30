@@ -26,8 +26,9 @@ export const fetchUserregistrationFailure = (error: any) => {
     payload: error
   }
 }
-const BASE_URL = 'http://localhost:3000/customers';  
-export const getUserregistration = () => {
+//GET USER DETAILS
+const BASE_URL = 'http://localhost:3000/users';  
+export const getAllUsers = () => {
  debugger
     return (dispatch:Dispatch<Action>) => {
       
@@ -50,6 +51,7 @@ export const getUserregistration = () => {
         })
     }
   }
+  //POST USER DETAILS
   //const BASE_URL = 
 export const postUsers = (newData: any,onSuccess: () => void) => {
   //newRecord ,onSuccess

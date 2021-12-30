@@ -1,6 +1,6 @@
 import { yupResolver } from '@hookform/resolvers/yup'
-import { Button, Grid, makeStyles, Paper, TextField, Typography } from '@material-ui/core'
-import React, { Dispatch } from 'react'
+import { Button, Grid, makeStyles, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from '@material-ui/core'
+import React, { Dispatch, useEffect, useState } from 'react'
 import { string } from 'yup/lib/locale'
 import* as userRegistAction from '../../../src/state/actions/userRegistrationAction/userRegistrationAction'
 
@@ -10,6 +10,8 @@ import { Navigate, useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Action, ActionType } from '../../state/action-type/userRegistrationAction-Type'
 import axios from 'axios'
+import { render } from '@testing-library/react'
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -36,12 +38,35 @@ interface IFormInput{
 
    
     blood:yup.string().required()
-  })  
+  }) 
 
+  // const Users =({classes,...props})=>{
+    
+    
+  //   const [currentId, setCurrentId] = useState(0); 
+
+  //   useEffect(() => {
+  //           //debugger
+  //           //alert("call fetchAllDCandidates");
+  //         props.fetchAllUsers();
+  //        console.log( "useEffect : =>"+JSON.stringify(props));
+  //   },[])
+   /* const UserReg = (props:any) => {
+    debugger
+   let usersList=props.usersList.users
+   console.log(usersList)
+    
+    }
+*/
   const UserRegistration:React.FC=(props:any )  =>{
   const methods= useForm<IFormInput> ({resolver:yupResolver(schema)});
   const {register, watch,control,handleSubmit,formState:{errors} }=methods;
-  let nevigate=useNavigate();
+      let nevigate=useNavigate();
+        useEffect(()=>{
+          debugger
+          props.getAllUsers();
+      },[]);
+
   const formSubmitHandler:SubmitHandler<IFormInput>=(data:IFormInput)=>{
     alert("call");
       console.log('data is = ',data);
@@ -63,8 +88,9 @@ interface IFormInput{
          
             <Typography align='center'><h1>User Registration</h1></Typography>
       
-
+            <Paper elevation={20}>
           <Grid container spacing={5}>
+            
             <Grid item xs={6}>
                 <Controller name='username' control={control} render={({field})=>(
                 <TextField {...field}label="User Name" name='username' error={!!errors.username} 
@@ -100,28 +126,63 @@ interface IFormInput{
              <Button  type='submit'   color='primary' variant="contained" >Submit</Button>
              </Grid>
              <Grid item xs={6}>
-             <Button type='submit'   color='primary' variant="contained">View</Button>
+               <Button  color='secondary' variant="contained">Cancle</Button>
+            
              </Grid>
-             
+            
           </Grid>
-          
+          </Paper>
           </form>
-        
+          <Grid>
+         <h3>User data</h3>
+          <hr></hr>
+          <TableContainer>
+          <Table>
+              <TableHead>
+               
+                <TableRow>
+                  
+                  <TableCell>UserName</TableCell>
+                  <TableCell>Email</TableCell>
+                  <TableCell>Mobile Number</TableCell>
+                  <TableCell>Blood Group</TableCell>
+                </TableRow>
+              </TableHead>
+               <TableBody>
+              {
+                  props.usersList.users.Length==0 ? "Data not Found": props.usersList.users.map((data:IFormInput,index:any)=>{                                        {/* UserRegistration.length===0 ? "Loading " : props.IFormInput.users.map((users:any) =>( */}
+                     return(  
+                     <TableRow key={index}> 
+                      <TableCell>{data.username}</TableCell> 
+                      <TableCell>{data.email}</TableCell> 
+                      <TableCell>{data.mobile}</TableCell> 
+                      <TableCell>{data.blood}</TableCell>     
+                      </TableRow>
+                     )}
+                  )
+              }
+             </TableBody> 
+            </Table>
+          </TableContainer>
+       
+             
         </Grid>
-         
+        </Grid>  
     )
 }
 
 
-const mapStateToProps = (state: { AuthData: any; }) => {
+const mapStateToProps = (state: { AuthData: any; usersList: any }) => {
   debugger
   return {
       authData: state.AuthData,
+      usersList:state.usersList
  }
 }
 
 const mapActionToProps={
-  postUsers:userRegistAction.postUsers 
+  postUsers:userRegistAction.postUsers ,
+  getAllUsers:userRegistAction.getAllUsers
   }
 
 export default connect(

@@ -9,7 +9,7 @@ const rootReducer = combineReducers({
     customerData:customerReducer,
     orderMaster:orderMasterReducer,
     foodItems:foodItemReducer,
-    userRegistrationData:userRegistrationReducer,
+    usersList:userRegistrationReducer,
 
 })
 
