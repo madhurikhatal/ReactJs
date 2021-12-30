@@ -1,5 +1,5 @@
 import { yupResolver } from '@hookform/resolvers/yup'
-import { Button, Grid, makeStyles, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from '@material-ui/core'
+import { Button, ButtonGroup, Grid, makeStyles, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from '@material-ui/core'
 import React, { Dispatch, useEffect, useState } from 'react'
 import { string } from 'yup/lib/locale'
 import* as userRegistAction from '../../../src/state/actions/userRegistrationAction/userRegistrationAction'
@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
   }));
  
 interface IFormInput{
+    id:number;
     username :string;
     email :string;
     mobile :string;
@@ -66,6 +67,22 @@ interface IFormInput{
           debugger
           props.getAllUsers();
       },[]);
+    
+  const handleDelete =(data:IFormInput) =>{
+    // dispatch(delete());
+    debugger
+    props.deleteUser(data.id,()=>{
+    debugger
+    })
+  }
+  const Edit=((data:IFormInput) =>{
+    debugger
+    props.putUser(data,()=>{ 
+      alert("Data is rady to edit");
+      debugger
+    })
+    
+  })
 
   const formSubmitHandler:SubmitHandler<IFormInput>=(data:IFormInput)=>{
     alert("call");
@@ -125,10 +142,9 @@ interface IFormInput{
              <Grid item xs={6}>
              <Button  type='submit'   color='primary' variant="contained" >Submit</Button>
              </Grid>
-             <Grid item xs={6}>
+             {/* <Grid item xs={6}>
                <Button  color='secondary' variant="contained">Cancle</Button>
-            
-             </Grid>
+             </Grid> */}
             
           </Grid>
           </Paper>
@@ -156,7 +172,12 @@ interface IFormInput{
                       <TableCell>{data.username}</TableCell> 
                       <TableCell>{data.email}</TableCell> 
                       <TableCell>{data.mobile}</TableCell> 
-                      <TableCell>{data.blood}</TableCell>     
+                      <TableCell>{data.blood}</TableCell>  
+                      <ButtonGroup>
+                        <Button color="default"style={{marginRight:"5px"}} variant='contained' onClick={() => Edit(data)}>Edit</Button>  
+                        <Button color="secondary" variant='contained' onClick={()=> handleDelete(data)}>Delete</Button>
+                        
+                      </ButtonGroup>   
                       </TableRow>
                      )}
                   )
@@ -182,7 +203,9 @@ const mapStateToProps = (state: { AuthData: any; usersList: any }) => {
 
 const mapActionToProps={
   postUsers:userRegistAction.postUsers ,
-  getAllUsers:userRegistAction.getAllUsers
+  getAllUsers:userRegistAction.getAllUsers,
+  deleteUser:userRegistAction.deleteUser,
+  putUser:userRegistAction.putUser
   }
 
 export default connect(
@@ -191,4 +214,8 @@ export default connect(
 )(UserRegistration)
 
 
+
+function dispatch(arg0: boolean) {
+  throw new Error('Function not implemented.')
+}
 //export default Signup

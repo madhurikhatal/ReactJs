@@ -5,7 +5,7 @@ import axios, { AxiosResponse } from "axios";
 //import { iSignup } from "../../../Models/signup/signup";
 //import { iuserRegistration } from "../../../Models/userRegistration/userRegistration";
 import {iuserRegistration } from "./../../../Models/userRegistration/userRegistration";
-
+import IFormInput from "./../../../components/userRegistration/UserRegistration"
 export const fetchUserregistrationRequest = () => {
     
   return {
@@ -51,6 +51,68 @@ export const getAllUsers = () => {
         })
     }
   }
+
+//DELETE USRE DETAILS
+
+  
+//const BASE_URL =  
+export const deleteUser = (id:any) => {
+ debugger
+    return (dispatch:Dispatch<Action>) => {
+      
+      let url =  'http://localhost:3000/users/'+id;
+      dispatch({ type: ActionType.FETCH_USERREGISTRATION_REQUEST,payload:ActionType.FETCH_USERREGISTRATION_REQUEST})
+      axios.delete(url)
+        .then((response : AxiosResponse<iuserRegistration[]>) => {
+          debugger
+          dispatch({
+               type:  ActionType.FETCH_USERREGISTRATION_SUCESS,
+               payload: response.data
+            } )
+          //onSuccess() */fetchCustomerSuccess(response.data)
+        })
+        .catch(error => {
+          dispatch( {
+            type: ActionType.FETCH_USERREGISTRATION_FAILURE,
+            payload: error
+          })
+        })
+    }
+  }
+
+
+
+
+
+
+  //EDIT USER DETAILS
+//const BASE_URL =  
+export const putUser = (id:any) => {
+  debugger
+     return (dispatch:Dispatch<Action>) => {
+       
+       let url =  'http://localhost:3000/users/'+id;
+       dispatch({ type: ActionType.FETCH_USERREGISTRATION_REQUEST,payload:ActionType.FETCH_USERREGISTRATION_REQUEST})
+       axios.put(url)
+         .then((response : AxiosResponse<iuserRegistration[]>) => {
+           debugger
+           dispatch({
+                type:  ActionType.FETCH_USERREGISTRATION_SUCESS,
+                payload: response.data
+             } )
+           //onSuccess() */fetchCustomerSuccess(response.data)
+         })
+         .catch(error => {
+           dispatch( {
+             type: ActionType.FETCH_USERREGISTRATION_FAILURE,
+             payload: error
+           })
+         })
+     }
+   }
+
+
+
   //POST USER DETAILS
   //const BASE_URL = 
 export const postUsers = (newData: any,onSuccess: () => void) => {
@@ -78,6 +140,7 @@ export const postUsers = (newData: any,onSuccess: () => void) => {
         })
     }
   }
+
 
 
   /*

@@ -160,67 +160,18 @@
   ],
   "users": [
     {
-      "id": 1,
-      "username": "madhuri",
-      "email": "madhuri@gmail.com",
-      "mobile": "123456",
-      "blood": "A+"
-    },
-    {
-      "username": "nikita",
-      "email": "nk@gmail.com",
-      "mobile": "678904",
-      "blood": "B+",
-      "id": 2
-    },
-    {
-      "username": "nikita",
-      "email": "nk@gmail.com",
-      "mobile": "678904",
-      "blood": "B+",
-      "id": 3
-    },
-    {
-      "username": "mk",
-      "email": "mk@gmail.com",
-      "mobile": "787983",
+      "username": "shubham",
+      "email": "shubham@gmail.com",
+      "mobile": "344443",
       "blood": "A+",
-      "id": 4
+      "id": 12
     },
     {
-      "username": "mk",
-      "email": "mk@gmail.com",
-      "mobile": "787983",
-      "blood": "A+",
-      "id": 5
-    },
-    {
-      "username": "mk",
-      "email": "test@gmail.com",
-      "mobile": "0988178",
-      "blood": "A+",
-      "id": 6
-    },
-    {
-      "username": "kkiud",
-      "email": "k@gmail.com",
-      "mobile": "678932",
-      "blood": "A+",
-      "id": 7
-    },
-    {
-      "username": "ssd",
+      "username": "jadhavsunilv",
       "email": "sds@gmail.com",
-      "mobile": "348763",
+      "mobile": "3333333",
       "blood": "B+",
-      "id": 8
-    },
-    {
-      "username": "sunil",
-      "email": "sunil@gmail.com",
-      "mobile": "7324631",
-      "blood": "B+",
-      "id": 9
+      "id": 13
     }
   ],
   "customers": [
